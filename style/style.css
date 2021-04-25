@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+/* Core Styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* utility */
+.container {
+    max-width: 85%;
+    margin: auto;
+}
+
+#main-body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 1000;
+    color: #fff;
+
+}
+/* Back styling for video */
+.showcase {
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    top: 0;
+    right:0;
+    width: 100%;
+    min-height: 100vh;
+    
+}
+.showcase video {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.8;
+        
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #00bfff;
+    mix-blend-mode: overlay;
+}
+
+#main-body, .showcase {
+    transition: 0.5s;
+}
+#main-body.active, .showcase.active {
+    right: 300px;
+}
+
+/* Styling for front (text and links) */
+/* Header */
+#main-header {
+    width: 100%;
+    padding: 1rem 0;
+    /* background-color: aqua; */
+
+}
+#main-header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+
+
+
+.logo {
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.toggle {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Introduction */
+
+.text {
+    margin-top: 10rem;
+
+}
+.text h2 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 1em;
+}
+.text h3 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1em;
+
+}
+.text p {
+    font-size: 1.1rem;
+    margin: 20px 0;
+    max-width: 700px;
+}
+.text a {
+    display: inline-block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #111;
+    background-color: #fff;
+    padding: 10px 30px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+
+}
+.text a:hover {
+    letter-spacing: 4px;
+
+}
+
+Bottom
+
+.social {
+    list-style: none;
+    display: flex;
+    margin-top: 120px;
+    
+    
+    
+}
+.social li a {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 20px;
+    color:#fff;
+    font-size: 0.7rem;
+    padding:15px 0;
+    padding-right: 20px;
+    transition: 0.2s;
+}
+.social li #facebook-icon:hover {
+    transform: translateY(-15px);
+    color: #0078ff;
+
+}
+
+.social li #twitter-icon:hover {
+    transform: translateY(-15px);
+    color: #00acee;
+
+}
+
+.social li #instagram-icon:hover{
+    transform: translateY(-15px);
+    color: #4c5fd7;
+}
+
+/* Side Menu */
+
+.menu {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -10;
+}
+.menu ul {
+    position: relative;
+    list-style: none;
+}
+.menu ul li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #222;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    font-weight: 500;
+}
+.menu ul li a:hover {
+    color: #00bfff;
+}
+
+/* Styling for mobile */
+@media (max-width: 768px) {
+    
+    .text h2 {
+        font-size: 3rem;
+    }
+    .text h3 {
+        font-size: 2rem;
+    }
+}
